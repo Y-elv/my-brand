@@ -977,3 +977,9 @@ a {
   left: 0;
   z-index: 1;
 }
+
+ .active {
+   /* Define the style for the active link, e.g., underline or change color */
+   border-bottom: 2px solid #007bff;
+  
+ }
