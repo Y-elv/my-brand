@@ -182,3 +182,8 @@ setTimeout(function() {
  
 
 })
+
+ 
+
+// indication of navlink 
+
