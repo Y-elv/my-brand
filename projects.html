@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
+    <title>My Portfolio</title>
+    <meta name="description" content="Wowfolio - A Simple & Clean Portfolio Template For Developers" />
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="main-header__logo-container">
+            <div class="main-header__logo-img-cont">
+                <img src="./assets/Elvis_photo.jpg" alt="logo Image" class="main-header__logo-img" />
+            </div>
+            <h4 class="main-header__logo-text">Elvis Mugisha</h4>
+        </div>
+    <nav class="main-header__navigation">
+        <ul class="main-header__navigation-links">
+            <li class="main-header__navigation-link "><a href="./index.html"> Home </a></li>
+            <li class="main-header__navigation-link"><a href="./about.html"> About </a></li>
+            <li class="main-header__navigation-link active">
+                <a href="./projects.html"> Projects </a>
+            </li>
+            <li class="main-header__navigation-link"><a href="./contact.html" href=""> Contact </a></li>
+        </ul>
+    </nav>
+        <div class="main-header__sm-scr-nav-btn">
+            <div class="main-header__sm-scr-nav-btn-line"></div>
+            <div class="main-header__sm-scr-nav-btn-line"></div>
+        </div>
+        <div class="main-header__sm-menu">
+            <div class="main-header__sm-menu-close">
+
+            </div>
+            <ul class="main-header__sm-menu-links">
+                <li>
+                    <a class="main-header__sm-menu-link main-header__sm-menu-link--1" name="home-hero">Home</a>
+                </li>
+
+                <li>
+                    <a class="main-header__sm-menu-link main-header__sm-menu-link--2" name="about">About</a>
+                </li>
+                <li>
+                    <a class="main-header__sm-menu-link main-header__sm-menu-link--3" name="projects">Projects</a>
+                </li>
+                <li>
+                    <a class="main-header__sm-menu-link main-header__sm-menu-link--4" name="contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- <button class="btn btn-theme btn-sm">Download CV</button> -->
+    </header>
+
+    <!--Remove or Comment out this theme selector code when you are done with choosing the right color for your theme so this color selector don't appear when you host the site online-->
+    <div class="themeClrSelector">
+        <input placeholder="Color Selector" type="color" value="#1DA1F2" class="themeClrSelector__input" />
+        <img alt="theme color tester" src="https://img.icons8.com/fluent/48/000000/rgb-circle-1.png"
+            class="themeClrSelector__img" />
+    </div>
+    <!---->
+
+  
+   
+    <section id="projects" class="projects main-section">
+        <div class="main-container">
+            <h2 class="heading-secondary projects__heading-secondary">
+                <span class="heading-secondary__sm"> Projects 🛠️</span>
+                <span class="heading-secondary__main">
+                    Here you will find some of the personal and clients projects that I created with the project details
+                </span>
+            </h2>
+            <div class="main-section__content">
+                <div class="projects__list">
+                    <div class="projects__list-item">
+                        <div class="projects__list-item-count">
+                            <span class="projects__list-item-count-num"> 1 </span>
+                            <span class="projects__list-item-count-line"> </span>
+                            <span class="projects__list-item-count-end-dot"> </span>
+                        </div>
+                        <div class="projects__list-item-details">
+                            <div class="projects__list-item-img-cont">
+                                <img src="./assets/menu_restaurant.PNG" alt="Project Image"
+                                    class="projects__list-item-img" />
+                            </div>
+                            <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                                Restaurant Menu
+                            </h3>
+                            <!-- <hr class="projects__title-text-divider" /> -->
+
+                            <p class="text-primary projects__list-item-text-primary">
+                                <span>
+                                    Introducing a mobile restaurant menu app that is currently under development,
+                                    set to showcase an extensive list of all products available at any restaurant,
+                                    including beverages and foods, along with their respective prices.
+                                    This cutting-edge app aims to revolutionize the dining experience with its
+                                    user-friendly design and intuitive interface, making it effortless
+                                    for customers to explore the diverse and delectable options offered.
+
+                                </span>
+                                <!-- <br />
+                  <br /> -->
+                                <span>
+                                    Whether patrons seek a specific dish or wish to discover new culinary delights,
+                                    the app will cater to all tastes and preferences through convenient filtering based
+                                    on dietary preferences,
+                                    ingredients, or cuisine type. Our dedicated development team is diligently working
+                                    on optimizing the app for various devices, ensuring compatibility with smartphones,
+                                    tablets, and desktops, while also focusing on implementing accessibility features
+                                    for a user-friendly experience. Valuable insights from early testers are being
+                                    incorporated to enhance the app's performance, ultimately creating a comprehensive
+                                    dining solution that seamlessly integrates with restaurant operations, enhancing
+                                    customer satisfaction and streamlining order management. As the restaurant menu app
+                                    nears its exciting launch, we are poised to set a new standard in the hospitality
+                                    industry,
+                                    providing customers with an unparalleled dining experience right at their
+                                    fingertips.
+                                </span>
+                            </p>
+                            <button class="btn btn-theme projects__btn-theme">
+                                <a href="https://taupe-rolypoly-c75321.netlify.app">Live Link</a>
+
+                            </button>
+                            <button class="btn btn-inv projects__btn-inv">
+                                <a href="https://github.com/Y-elv/Restaurant_Menus"> Code Link</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="projects__list-item projects__list-item--inv">
+                        <div class="projects__list-item-details">
+                            <div class="projects__list-item-img-cont">
+                                <img src="./assets/funhealthHome.png" alt="Project Image"
+                                    class="projects__list-item-img" />
+                            </div>
+                            <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                                FunHealth App
+                            </h3>
+                            <!-- <hr class="projects__title-text-divider" /> -->
+
+                            <p class="text-primary projects__list-item-text-primary">
+                                <span>
+                                    FunHealth, your ultimate health companion! Our app seamlessly connects users with
+                                    experienced therapists, fostering a
+                                    supportive and engaging community through our integrated chat feature. Effortlessly
+                                    find therapists and connect
+                                    instantly for health support. With a user-friendly interface, stay connected with
+                                    your well-being, engage in meaningful
+                                    conversations, and access valuable health information. Get the support you need,
+                                    when you need it, in just a few taps.
+                                    FunHealth – where health meets fun, support is just a chat away!
+                                </span>
+                                <!-- <br />
+                  <br /> -->
+                                <span>
+
+                                </span>
+                            </p>
+                            <button class="btn btn-theme projects__btn-theme">
+                                <a href="https://funhealthdating.netlify.app/">Live Link</a>
+
+                            </button>
+                            <button class="btn btn-inv projects__btn-inv">
+                                <a href="https://github.com/Y-elv/kundwa-heath-fn">Code Link</a>
+                            </button>
+                        </div>
+                        <div class="projects__list-item-count">
+                            <span class="projects__list-item-count-num"> 2 </span>
+                            <span class="projects__list-item-count-line"> </span>
+                            <span class="projects__list-item-count-end-dot"> </span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="main-footer">
+        <div class="main-footer__upper">
+            <div class="main-container">
+                <ul class="main-footer__links">
+                    <li class="main-footer__link">
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li class="main-footer__link">
+                        <a href="./index.html#about">About</a>
+                    </li>
+                    <li class="main-footer__link">
+                        <a href="./index.html#projects">Projects</a>
+                    </li>
+                    <li class="main-footer__link">
+                        <a href="./index.html#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="main-footer__mid-line"></div>
+                <div class="main-footer__socials">
+                    <a href="https://github.com/Y-elv" class="main-footer__social-link">
+                        <img src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png"
+                            alt="" class="main-footer__social-link-icon" />
+                    </a>
+                    <a href="https://www.instagram.com/elvo_mugisha/" class="main-footer__social-link">
+                        <img src="./assets/icons8-instagram-48.png" alt="" class="main-footer__social-link-icon" />
+                    </a>
+                    <a href="https://twitter.com/elvo_wa_gakumba" class="main-footer__social-link">
+                        <img src="./assets/icons8-twitter-50.png" alt="" class="main-footer__social-link-icon" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/elvis-mugisha-331b6b16b/" class="main-footer__social-link">
+                        <img src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png"
+                            alt="" class="main-footer__social-link-icon" />
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-footer__bottom">
+            <div class="main-container">
+                <p class="main-footer__bottom-txt">
+                    <!-- If you can give me some credits or shoutout here by linking to my website, then that will help me a lot :) -->
+                    <a target="_blank" href="https://github.com/Y-elv/myPortfolio">Personal Portfolio</a>
+                    <script>document.write(new Date().getFullYear())</script>. Made by
+                    <a target="_blank" href="https://github.com/Y-elv">Elvis Mugisha</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
