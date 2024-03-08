@@ -6,7 +6,7 @@
 }
 
 :root {
-  --themeColor: 29, 161, 242;
+  --themeColor: 70, 143, 175;
   /* Theme Color in (R,G,B) format */
 }
 
@@ -477,6 +477,8 @@ a {
 
 .about__text-primary {
   margin-bottom: 4rem;
+
+  margin: 0px 0px 5px 15px;
 }
 
 .about__info-heading {
