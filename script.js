@@ -111,79 +111,72 @@ const eventFire = (el, etype) => {
   }
 }
 
-themeColorSelector.addEventListener('click', () => {
-  eventFire(themeColorSelectorInput, 'input')
-})
 
-const setDynamicColor = (color) => {
-
-  const { r, g, b } = hexToRgb(`${color}`)
-  
-  root.style.setProperty('--themeColor', `${r},${g},${b}`);
-  //localStorage.setItem('color', color)
-}
-
-themeColorSelectorInput.addEventListener('input', (e) => {
-  setDynamicColor(e.target.value)
-})
-
-// if (localStorage.getItem('color')) {
-//   let userSelectedColor = localStorage.getItem('color')
-//   themeColorSelectorInput.value = userSelectedColor
-//   setDynamicColor(userSelectedColor)
-// }
-
-// ---
 const headerLogoConatiner = document.querySelector('.main-header__logo-container')
 
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
 
-// integration of the form 
+
 
 const form=document.querySelector('.contact__form')
 
-form.addEventListener('submit',async (e)=>{
+form.addEventListener("submit", async (e) => {
+  try {
+    e.preventDefault();
 
-  try{
-  e.preventDefault();
+    const nameField = document.getElementById("nameField");
+    const emailField = document.getElementById("emailField");
+    const messageField = document.getElementById("messageField");
 
-const nameField=document.getElementById('nameField')
-const emailField=document.getElementById('emailField')
-const messageField=document.getElementById('messageField')
+    const nameValue = nameField.value;
+    const emailValue = emailField.value;
+    const messageValue = messageField.value;
 
-const nameValue=nameField.value;
-const emailValue=emailField.value;
-const messageValue=messageField.value;
+    if (!nameValue || !emailValue || !messageValue) {
+      alert("Please fill in all the required fields");
+      return;
+    }
 
-const response=await fetch('https://vast-plum-indri-tutu.cyclic.cloud/api/v1/contact',{
-  method:'POST',
-  headers:{
-    'Content-Type': 'application/json',
-  },
-  body:JSON.stringify({
-    name:nameValue,
-    email:emailValue,
-    message:messageValue
-  })
+    if (/^\d+$/.test(nameValue)) {
+      alert("Name should not contain only numbers");
+      return;
+    }
 
-})
+    const emailRegex = /^[^\s@]+@(gmail\.com|yahoo\.com|otherdomain\.com)$/;
 
+    if (!emailRegex.test(emailValue)) {
+      alert(
+        "Please enter a valid email address with the correct domain (e.g., gmail.com, yahoo.com, otherdomain.com)"
+      );
+      return;
+    }
 
+   
+    const formDataArray = [
+      {
+        name: nameValue,
+        email: emailValue,
+        message: messageValue,
+      },
+    ];
+
+    formDataArray.forEach((data, index) => {
+      console.log(`Data from the Array`);
+      console.log("Name:", data.name);
+      console.log("Email:", data.email);
+      console.log("Message:", data.message);
+    });
+
+    alert("Successfully submitted the form!");
+    form.reset();
+  } catch (error) {
+    console.error("Error in your system:", error);
   }
-catch(error){
-console.log("the error in your system is ",error)
-}
-setTimeout(function() {
-  alert("Successfully sent!");
-  form.reset(); // Reset the form
-}, 1000);
- 
-
-})
+});
 
  
 
-// indication of navlink 
+
 
