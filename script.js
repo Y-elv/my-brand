@@ -167,6 +167,8 @@ form.addEventListener("submit", async (e) => {
       console.log("Name:", data.name);
       console.log("Email:", data.email);
       console.log("Message:", data.message);
+        console.log("submitted:",formDataArray);
+       localStorage.setItem(`formData_${index}`, JSON.stringify(data));
     });
 
     alert("Successfully submitted the form!");
