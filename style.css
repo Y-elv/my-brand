@@ -985,3 +985,14 @@ a {
    border-bottom: 2px solid #007bff;
   
  }
+
+ #alert-msg {
+  color: red;
+  font-size: 12px;
+   /* Default color for error messages */
+}
+
+#alert-msg.success {
+  font-size: 12px;
+  color: green; /* Color for successful submission */
+}
