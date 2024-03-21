@@ -115,6 +115,7 @@ headerLogoConatiner.addEventListener("click", () => {
 
 const form = document.querySelector(".contact__form");
 const alertMsg = document.getElementById("alert-msg");
+const formDataArray = [];
 
 form.addEventListener("submit", async (e) => {
   try {
@@ -129,7 +130,6 @@ form.addEventListener("submit", async (e) => {
     const messageValue = messageField.value;
 
     let alertMessage = "";
-
 
     if (!nameValue && !emailValue && !messageValue) {
       alertMessage += "Please fill in all the required fields.\n";
@@ -156,34 +156,32 @@ form.addEventListener("submit", async (e) => {
       }
     }
 
-if (alertMessage) {
-  const messages = alertMessage.split("\n").filter((message) => message.trim());
-  if (messages.length === 2) {
-    alertMsg.textContent = `${messages[0]}\n${messages[1]}`;
-  } else {
-    alertMsg.textContent = alertMessage;
-  }
-  alertMsg.classList.remove("success");
-  return;
-}
+    if (alertMessage) {
+      const messages = alertMessage
+        .split("\n")
+        .filter((message) => message.trim());
+      if (messages.length === 2) {
+        alertMsg.textContent = `${messages[0]}\n${messages[1]}`;
+      } else {
+        alertMsg.textContent = alertMessage;
+      }
+      alertMsg.classList.remove("success");
+      return;
+    }
+
+    // Construct formData object inside the submit event listener
+    const formData = {
+      name: nameValue,
+      email: emailValue,
+      message: messageValue,
+    };
 
     
-    const formDataArray = [
-      {
-        name: nameValue,
-        email: emailValue,
-        message: messageValue,
-      },
-    ];
 
-    formDataArray.forEach((data, index) => {
-      console.log(`Data from the Array`);
-      console.log("Name:", data.name);
-      console.log("Email:", data.email);
-      console.log("Message:", data.message);
-      console.log("submitted:", formDataArray);
-      localStorage.setItem(`formData_${index}`, JSON.stringify(data));
-    });
+    // Push formData into formDataArray
+    formDataArray.push(formData);
+
+    console.log("submitted:", formDataArray);
 
     alertMsg.textContent = "Successfully submitted the form!";
     alertMsg.classList.add("success");

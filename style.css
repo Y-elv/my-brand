@@ -988,11 +988,11 @@ a {
 
  #alert-msg {
   color: red;
-  font-size: 12px;
+  font-size: 13px;
    /* Default color for error messages */
 }
 
 #alert-msg.success {
-  font-size: 12px;
+  font-size: 13px;
   color: green; /* Color for successful submission */
 }
