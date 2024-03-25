@@ -1,16 +1,16 @@
-const smMenuBtn = document.querySelector(".main-header__sm-scr-nav-btn");
-const smMenu = document.querySelector(".main-header__sm-menu");
-const smMenuCloseBtn = document.querySelector(".main-header__sm-menu-close");
+const smMenuBtn = document.querySelector(".main-headerer-nav-btn");
+const smMenu = document.querySelector(".main-header-menu");
+const smMenuCloseBtn = document.querySelector(".main-header-menu-close");
 
-const smMenuLinks = document.querySelectorAll(".main-header__sm-menu-link");
-const smMenuLink1 = document.querySelector(".main-header__sm-menu-link--1");
-const smMenuLink2 = document.querySelector(".main-header__sm-menu-link--2");
-const smMenuLink3 = document.querySelector(".main-header__sm-menu-link--3");
-const smMenuLink4 = document.querySelector(".main-header__sm-menu-link--4");
+const smMenuLinks = document.querySelectorAll(".main-header-menu-link");
+const smMenuLink1 = document.querySelector(".main-header-menu-link--1");
+const smMenuLink2 = document.querySelector(".main-header-menu-link--2");
+const smMenuLink3 = document.querySelector(".main-header-menu-link--3");
+const smMenuLink4 = document.querySelector(".main-header-menu-link--4");
 
 smMenuBtn.addEventListener("click", () => {
   smMenu.style.transitionDelay = "0s";
-  smMenu.classList.add("main-header__sm-menu--active");
+  smMenu.classList.add("main-header-menu--active");
 
   smMenuLink1.style.transitionDelay = ".5s";
   smMenuLink1.style.transform = "translateY(0)";
@@ -48,7 +48,7 @@ smMenuLinks.forEach((ele) => {
     smMenuLink1.style.opacity = "0";
 
     smMenu.style.transitionDelay = "1.2s";
-    smMenu.classList.remove("main-header__sm-menu--active");
+    smMenu.classList.remove("main-header-menu--active");
 
     setTimeout(() => {
       document.getElementById(ele.name).scrollIntoView();
@@ -74,7 +74,7 @@ smMenuCloseBtn.addEventListener("click", () => {
   smMenuLink1.style.opacity = "0";
 
   smMenu.style.transitionDelay = "1.2s";
-  smMenu.classList.remove("main-header__sm-menu--active");
+  smMenu.classList.remove("main-header-menu--active");
 });
 
 // ---
