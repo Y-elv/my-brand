@@ -22,17 +22,18 @@
             </div>
             <h4 class="main-header__logo-text">Elvis Mugisha</h4>
         </div>
-    <nav class="main-header__navigation">
-        <ul class="main-header__navigation-links">
-            <li class="main-header__navigation-link "><a href="./index.html"> Home </a></li>
-            <li class="main-header__navigation-link"><a href="./about.html"> About </a></li>
-            <li class="main-header__navigation-link">
-                <a href="./projects.html"> Projects </a>
-            </li>
-            <li class="main-header__navigation-link active"><a href="./contact.html" href=""> Contact </a></li>
-            <li class="main-header__navigation-link"><a href="./signIn.html" href=""> SignIn </a></li>
-        </ul>
-    </nav>
+        <nav class="main-header__navigation">
+            <ul class="main-header__navigation-links">
+                <li class="main-header__navigation-link "><a href="./index.html"> Home </a></li>
+                <li class="main-header__navigation-link"><a href="./about.html"> About </a></li>
+                <li class="main-header__navigation-link">
+                    <a href="./projects.html"> Projects </a>
+                </li>
+                <li class="main-header__navigation-link"><a href="./contact.html" href=""> Contact </a></li>
+                <li class="main-header__navigation-link active"><a href="./signIn.html" href=""> SignIn </a></li>
+            </ul>
+        </nav>
+
         <div class="main-header__sm-scr-nav-btn">
             <div class="main-header__sm-scr-nav-btn-line"></div>
             <div class="main-header__sm-scr-nav-btn-line"></div>
@@ -57,47 +58,32 @@
                 </li>
             </ul>
         </div>
-       
+
     </header>
 
-
-  
-    <section id="contact" class="contact main-section">
-        <div class="main-container">
-            <h2 class="heading-secondary">
-                <span class="heading-secondary__sm"> Contact 📞</span>
-                <span class="heading-secondary__main">
-                    Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
-                </span>
-            </h2>
-            <div class="main-section__content">
-                <div class="contact__form-cont">
-                    <form class="contact__form">
-                        <div class="contact__form-field">
-                            <label for="name" class="contact__form-field-label">Name</label>
-                            <input placeholder="Enter Your Name" type="text" class="contact__form-field-input"
-                                id="nameField" />
-                        </div>
-                        <div class="contact__form-field">
-                            <label for="name" class="contact__form-field-label">Email</label>
-                            <input placeholder="Enter Your Email" type="text" class="contact__form-field-input"
-                                id="emailField" />
-                        </div>
-                        <div class="contact__form-field">
-                            <label for="name" class="contact__form-field-label">Message</label>
-                            <textarea placeholder="Enter Your Message" name="message" cols="30" rows="10"
-                                class="contact__form-field-input" id="messageField"></textarea>
-                        </div>
-                        <div>
-                            <p id="alert-msg"></p>
-                        </div>
-                        <button type="submit" class="contact__form-submit">Submit</button>
-                    </form>
-                    <div class="contact__form-visual"></div>
-                </div>
+<section id="signIn" class="signIn">
+    <div class="signIn__content">
+        <div class="signIn__info">
+        <form action="/your-action" method="post">
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
             </div>
+            <div>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br>
+            </div>
+       
+            <button type="submit"class="signIn__form-submit">Sign In</button>
+            <p>Don't have an account? <a href="./signUp.html">Sign Up</a></p>
+        </form>
+       
         </div>
-    </section>
+    </div>
+</section>
+
+
+
     <footer class="main-footer">
         <div class="main-footer__upper">
             <div class="main-container">
@@ -138,7 +124,7 @@
         <div class="main-footer__bottom">
             <div class="main-container">
                 <p class="main-footer__bottom-txt">
-                    <!-- If you can give me some credits or shoutout here by linking to my website, then that will help me a lot :) -->
+
                     <a target="_blank" href="https://github.com/Y-elv/myPortfolio">Personal Portfolio</a>
                     <script>document.write(new Date().getFullYear())</script>. Made by
                     <a target="_blank" href="https://github.com/Y-elv">Elvis Mugisha</a>

@@ -44,7 +44,7 @@ html {
 } */
 
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 ul {
@@ -283,7 +283,7 @@ a {
 .main-header__sm-menu-close:before,
 .main-header__sm-menu-close:after {
   position: absolute;
-  content: ' ';
+  content: " ";
   height: 3rem;
   width: 1px;
   left: 50%;
@@ -652,8 +652,6 @@ a {
 .projects__list-item-img {
   width: 100%;
   display: block;
-  
-  
 }
 
 .projects__list-item-heading-tertiary {
@@ -775,7 +773,6 @@ a {
 /* Code for Mozilla Firefox 4 to 18 */
 /* Code for Mozilla Firefox 19+ */
 
-
 .contact__form-field-input::placeholder {
   color: rgb(175, 175, 175);
   font-weight: 400;
@@ -835,7 +832,7 @@ a {
 }
 
 .contact__form-visual {
-  background-image: url('https://i.postimg.cc/mrHQw69n/contact-form-bg.jpg');
+  background-image: url("https://i.postimg.cc/mrHQw69n/contact-form-bg.jpg");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -850,7 +847,7 @@ a {
 }
 
 .contact__form-visual::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 20;
   background: rgba(var(--themeColor), 0.5);
@@ -936,7 +933,6 @@ a {
   font-weight: 700;
 }
 
-
 .themeClrSelector {
   position: fixed;
   top: 50%;
@@ -980,19 +976,78 @@ a {
   z-index: 1;
 }
 
- .active {
-   /* Define the style for the active link, e.g., underline or change color */
-   border-bottom: 2px solid #007bff;
-  
- }
+.active {
+  /* Define the style for the active link, e.g., underline or change color */
+  border-bottom: 2px solid #007bff;
+}
 
- #alert-msg {
+#alert-msg {
   color: red;
   font-size: 13px;
-   /* Default color for error messages */
+  /* Default color for error messages */
 }
 
 #alert-msg.success {
   font-size: 13px;
   color: green; /* Color for successful submission */
+}
+
+.signIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.signIn__content {
+  text-align: center;
+}
+
+.signIn__info form {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 40vh;
+  width: 45vw;
+}
+
+.signIn__info form div {
+  height: 10vh;
+  width: 45vw;
+}
+
+.signIn__info form input[type="email"],
+.signIn__info form input[type="password"] {
+  width: 50%;
+  padding: 2px;
+  box-sizing: border-box;
+}
+.signIn__info form label,
+.signIn__info form input[type="email"],
+.signIn__info form input[type="password"],
+.signIn__info form button,
+.signIn__info p {
+  font-size: 20px;
+}
+
+.signIn__form-submit {
+  padding: 1rem;
+  width: 50%;
+  font-size: 1.6rem;
+  border: none;
+  letter-spacing: 1px;
+  font-family: inherit;
+  font-weight: 500;
+  background: rgba(var(--themeColor), 1);
+  color: #fff;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  display: block;
+  border-radius: 5px;
+  cursor: pointer;
 }
