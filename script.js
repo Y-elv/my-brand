@@ -176,16 +176,29 @@ form.addEventListener("submit", async (e) => {
       message: messageValue,
     };
 
-    
+    const response = await fetch("http://localhost:3000/api/v1/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
-    // Push formData into formDataArray
-    formDataArray.push(formData);
-
-    console.log("submitted:", formDataArray);
-
-    alertMsg.textContent = "Successfully submitted the form!";
-    alertMsg.classList.add("success");
-    form.reset();
+    if (response.ok) {
+      alertMsg.textContent = "Successfully submitted the Message!";
+      alertMsg.classList.add("success");
+      console.log("submitted:", formData);
+      form.reset();
+      setTimeout(() => {
+        alertMsg.textContent = "";
+        alertMsg.classList.remove("success");
+      }, 5000);
+    } else {
+     
+      alertMsg.textContent =
+        "Failed to submit the form. Please try again later.";
+      alertMsg.classList.remove("success");
+    }
   } catch (error) {
     console.error("Error in your system:", error);
   }
