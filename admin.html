@@ -61,26 +61,26 @@
 
     </header>
 
-    <section id="signIn" class="signIn">
-        <div class="signIn__content">
-            <div class="signIn__info">
-                <form action="/your-action" method="post">
-                    <div>
-                        <label for="email">Email</label><br>
-                        <input type="email" id="email" name="email" required><br>
-                    </div>
-                    <div>
-                        <label for="password">Password</label><br>
-                        <input type="password" id="password" name="password" required><br>
-                    </div>
-    
-                    <button type="submit" class="signIn__form-submit">Sign In</button>
-                    
-                </form>
-    
-            </div>
+<section id="signIn" class="signIn">
+    <div class="signIn__content">
+        <div class="signIn__info">
+            <form id="loginForm" action="#" method="POST">
+                <div>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                </div>
+                <div>
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" name="password" required><br>
+                </div>
+                <div id="message" style="margin-top: 4px;"></div>
+                <button type="submit" class="signIn__form-submit">Sign In</button>
+
+            </form>
+
         </div>
-    </section>
+    </div>
+</section>
 
 
     <footer class="main-footer">
@@ -131,7 +131,7 @@
             </div>
         </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./signin.js"></script>
 </body>
 
 </html>
