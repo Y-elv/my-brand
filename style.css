@@ -999,7 +999,6 @@ a {
   height: 100vh;
   margin: 0;
   padding: 20px;
- 
 }
 
 .signIn__info form {
@@ -1052,4 +1051,97 @@ a {
   display: block;
   border-radius: 5px;
   cursor: pointer;
+}
+.all-div {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+.left-div {
+  height: 100vh;
+  width: 20vw;
+  background: rgba(var(--themeColor), 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.right-div {
+  height: 100vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+.up-div {
+  height: 20vh;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+}
+.down-div {
+  height: 80vh;
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  align-items: center;
+  gap: 1rem;
+}
+.down-div-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.icon-user {
+  height: 9px;
+}
+
+.icon-user a,
+.icon-comments a,
+.icon-message a,
+.icon-blog a {
+  text-decoration: none;
+  color: black;
+}
+
+.icon-user,
+.icon-comments,
+.icon-message,
+.icon-blog {
+  font-size: 20px;
+}
+.above-div {
+  margin-top: 20px;
+
+  height: 8vh;
+  width: 80vw;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.admin-profile {
+  background: rgba(var(--themeColor), 1);
+  height: 7vh;
+  width: 4vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+.under-div {
+  border: 1px solid red;
+  height: 50vh;
+  width: 70vw;
+}
+.part1 {
+  height: 8vh;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  font-size: 28px;
 }
