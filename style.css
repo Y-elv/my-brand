@@ -1067,7 +1067,7 @@ a {
   justify-content: center;
 }
 .right-div {
-  height: 100vh;
+  min-height: 100vh;
   width: 80vw;
   display: flex;
   flex-direction: column;
@@ -1151,7 +1151,6 @@ a {
   align-items: center;
 }
 .blogs-container {
-  min-height: 100vh;
   width: 100vw;
   color: #eee;
   display: flex;
@@ -1195,7 +1194,7 @@ a {
   display: flex;
   align-items: center;
   font-size: 18px;
-  gap:5rem;
+  gap: 5rem;
   padding-bottom: 6px;
 }
 .blog-pic {
@@ -1204,7 +1203,14 @@ a {
   border: 1px solid black;
   padding: 5px;
 }
-.blog-icons{
+.blog-icons {
   display: flex;
   gap: 1rem;
+}
+.blog-user-conents {
+  height: 80vh;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 20px 30px;
 }
