@@ -17,29 +17,50 @@ async function handleLoginSubmit(e) {
     setMessage("Please fill in all the required fields.", "red");
     return;
   }
+  const token = localStorage.getItem("token");
+  console.log("token:", token);
 
-  // Hardcoded admin credentials
-  const adminEmail = "mugishaelvis456@gmail.com";
-  const adminPassword = "123";
+  if (!token) {
+    console.error("Token not found in local storage");
+    return;
+  }
 
-  if (email === adminEmail && password === adminPassword) {
-    // Admin login successful
-    console.log("Admin login");
+  try {
+    const response = await fetch("http://localhost:3000/api/v1/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `${token}`,
+      },
+      body: JSON.stringify({ email: email, password: password }),
+    });
 
-    // You can perform admin-specific actions here, if needed
+    if (!response.ok) {
+      throw new Error("Login failed");
+    }
 
-    // Proceed to dashboard page
-    setMessage("Admin login successful. Redirecting to dashboard...", "green");
-    setTimeout(() => {
-      window.location.href = "dashboard.html";
-    }, 3000);
-  } else {
-    // Regular user login
-    console.log("Regular user login");
+    const data = await response.json();
 
-    // You can perform regular user actions here, if needed
+    if (data.status === true) {
+      // Login successful
+      console.log("Login successful");
 
-    // Display login failure message
+      // You can perform user-specific actions here, if needed
+
+      // Proceed to dashboard page
+      setMessage("Login successful. Redirecting to dashboard...", "green");
+      setTimeout(() => {
+        window.location.href = "message.html";
+      }, 3000);
+    } else {
+      // Login failed
+      console.log("Login failed");
+
+      // Display login failure message
+      setMessage("Invalid email or password. Please try again.", "red");
+    }
+  } catch (error) {
+    console.error("Error:", error.message);
     setMessage("Invalid email or password. Please try again.", "red");
   }
 
