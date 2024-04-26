@@ -50,6 +50,9 @@ async function handleCreateBlogSubmit(e) {
     if (data.status === true) {
       console.log("Create Blog successful");
       setMessage("Create Blog successful", "green");
+      setTimeout(() => {
+        setMessage("", "");
+      }, 3000);
     } else {
       console.log("Failed to create a blog");
       setMessage("Failed to create a blog. Please try again.", "red");
