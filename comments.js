@@ -7,7 +7,7 @@ function fetchTasks() {
     return;
   }
 
-  fetch("http://localhost:3000/api/v1/comment/getAllComment", {
+  fetch("https://my-brand-bn-ytew.onrender.com/api/v1/comment/getAllComment", {
     method: "GET",
     headers: {
       authorization: `${token}`,
@@ -64,7 +64,7 @@ function deleteTask(messageId) {
   const token = localStorage.getItem("token");
 
   fetch(
-    `http://localhost:3000/api/v1/comment/deleteComment/${messageId}`,
+    `https://my-brand-bn-ytew.onrender.com/api/v1/comment/deleteComment/${messageId}`,
     {
       method: "DELETE",
       headers: {

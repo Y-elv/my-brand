@@ -26,14 +26,17 @@ async function handleLoginSubmit(e) {
   }
 
   try {
-    const response = await fetch("http://localhost:3000/api/v1/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `${token}`,
-      },
-      body: JSON.stringify({ email: email, password: password }),
-    });
+    const response = await fetch(
+      "https://my-brand-bn-ytew.onrender.com/api/v1/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `${token}`,
+        },
+        body: JSON.stringify({ email: email, password: password }),
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Login failed");

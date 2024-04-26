@@ -176,13 +176,16 @@ form.addEventListener("submit", async (e) => {
       message: messageValue,
     };
 
-    const response = await fetch("http://localhost:3000/api/v1/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    const response = await fetch(
+      "https://my-brand-bn-ytew.onrender.com/api/v1/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
 
     if (response.ok) {
       alertMsg.textContent = "Successfully submitted the Message!";

@@ -27,7 +27,7 @@ async function handleCreateBlogSubmit(e) {
     console.log("Data being sent:", { name, description, pic });
 
     const response = await fetch(
-      "http://localhost:3000/api/v1/blog/createBlog",
+      "https://my-brand-bn-ytew.onrender.com/api/v1/blog/createBlog",
       {
         method: "POST",
         headers: {

@@ -7,7 +7,7 @@ function fetchTasks() {
     return;
   }
 
-  fetch("http://localhost:3000/api/v1/getAll", {
+  fetch("https://my-brand-bn-ytew.onrender.com/api/v1/getAll", {
     method: "GET",
     headers: {
       authorization: `${token}`,
@@ -63,7 +63,7 @@ function displayTasks(messages) {
 function deleteTask(messageId) {
   const token = localStorage.getItem("token");
 
-  fetch(`http://localhost:3000/api/v1/delete/${messageId}`, {
+  fetch(`https://my-brand-bn-ytew.onrender.com/api/v1/delete/${messageId}`, {
     method: "DELETE",
     headers: {
       authorization: `${token}`,

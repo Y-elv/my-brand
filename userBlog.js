@@ -60,7 +60,9 @@ function displayTasks(messages) {
 }
 
 function fetchComments(blogId) {
-  fetch(`http://localhost:3000/api/v1/comment/getComment/${blogId}`)
+  fetch(
+    `https://my-brand-bn-ytew.onrender.com/api/v1/comment/getComment/${blogId}`
+  )
     .then((response) => {
       if (!response.ok) {
         throw new Error("Failed to fetch comments");
@@ -113,20 +115,23 @@ function submitComment(blogId) {
     blogId: blogIdValue,
   };
 
-  fetch(`http://localhost:3000/api/v1/comment/createComment/${blogId}`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(commentData),
-  })
+  fetch(
+    `https://my-brand-bn-ytew.onrender.com/api/v1/comment/createComment/${blogId}`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(commentData),
+    }
+  )
     .then((response) => {
       if (!response.ok) {
         throw new Error("Failed to submit comment");
       }
       console.log("Comment submitted successfully");
       alert(`your comment is sent`);
-       fetchTasks();
+      fetchTasks();
     })
     .catch((error) => {
       console.error("Error submitting comment:", error);
