@@ -3,7 +3,7 @@ function fetchTasks() {
 
   
 
-  fetch("http://localhost:3000/api/v1/blog/getAllBlog", {
+  fetch("https://my-brand-bn-ytew.onrender.com/api/v1/blog/getAllBlog", {
     method: "GET",
   })
     .then((response) => {
