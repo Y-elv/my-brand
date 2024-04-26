@@ -1209,7 +1209,7 @@ a {
   gap: 1rem;
 }
 .blog-user-conents {
-  height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -1275,5 +1275,8 @@ a {
 .message {
   display: flex;
   flex-direction: column;
-  
+}
+.blog-comments {
+  min-height: 20vh;
+  font-size: 16px;
 }

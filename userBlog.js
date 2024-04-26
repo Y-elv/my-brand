@@ -53,7 +53,37 @@ function displayTasks(messages) {
                 <div class="fetched-comments" id="fetchedComments_${message._id}"></div>
             </div>`;
     tasksContainer.appendChild(taskElement);
+
+    // Fetch and display comments for each blog post
+    fetchComments(message._id);
   });
+}
+
+function fetchComments(blogId) {
+  fetch(`http://localhost:3000/api/v1/comment/getComment/${blogId}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch comments");
+      }
+      return response.json();
+    })
+    .then((comments) => {
+      console.log("comments", comments);
+      const commentsContainer = document.getElementById(
+        `fetchedComments_${blogId}`
+      );
+      commentsContainer.innerHTML = "";
+      comments.forEach((comment) => {
+        const commentElement = document.createElement("div");
+        commentElement.classList.add("comment");
+        commentElement.innerHTML = `
+            <p><strong>${comment.name}</strong>: ${comment.text}</p>`;
+        commentsContainer.appendChild(commentElement);
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching comments:", error);
+    });
 }
 
 function handleAddCommentClick(blogId) {
@@ -67,32 +97,6 @@ function handleAddCommentClick(blogId) {
     commentInput.style.display = "none";
   }
 }
-
-fetch(`http://localhost:3000/api/v1/comment/getComment/${blogId}`)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Failed to fetch comments");
-    }
-    return response.json();
-  })
-  .then((comments) => {
-    console.log("comments", comments);
-    const commentsContainer = document.getElementById(
-      `fetchedComments_${blogId}`
-    );
-
-    commentsContainer.innerHTML = "";
-    comments.forEach((comment) => {
-      const commentElement = document.createElement("div");
-      commentElement.classList.add("comment");
-      commentElement.innerHTML = `
-            <p><strong>${comment.name}</strong>: ${comment.text}</p>`;
-      commentsContainer.appendChild(commentElement);
-    });
-  })
-  .catch((error) => {
-    console.error("Error fetching comments:", error);
-  });
 
 function submitComment(blogId) {
   const nameText = document.getElementById(`nameText_${blogId}`).value;
@@ -122,6 +126,7 @@ function submitComment(blogId) {
       }
       console.log("Comment submitted successfully");
       alert(`your comment is sent`);
+       fetchTasks();
     })
     .catch((error) => {
       console.error("Error submitting comment:", error);
