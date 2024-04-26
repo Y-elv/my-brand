@@ -41,7 +41,7 @@ async function handleLoginSubmit(e) {
       console.log("Login successful");
 
       // Set token in local storage
-      localStorage.setItem("token", data.token);
+      localStorage.setItem("token", data.message.token);
 
       console.log("Login successful");
 
