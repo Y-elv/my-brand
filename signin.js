@@ -17,7 +17,6 @@ async function handleLoginSubmit(e) {
     setMessage("Please fill in all the required fields.", "red");
     return;
   }
- 
 
   try {
     const response = await fetch(
@@ -26,7 +25,6 @@ async function handleLoginSubmit(e) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-         
         },
         body: JSON.stringify({ email: email, password: password }),
       }
@@ -40,6 +38,11 @@ async function handleLoginSubmit(e) {
 
     if (data.status === true) {
       // Login successful
+      console.log("Login successful");
+
+      // Set token in local storage
+      localStorage.setItem("token", data.token);
+
       console.log("Login successful");
 
       // You can perform user-specific actions here, if needed
