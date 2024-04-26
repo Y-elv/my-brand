@@ -1,11 +1,7 @@
 function fetchTasks() {
-  const token = localStorage.getItem("token");
-  console.log("token:", token);
+  
 
-  if (!token) {
-    console.error("Token not found in local storage");
-    return;
-  }
+  
 
   fetch("http://localhost:3000/api/v1/blog/getAllBlog", {
     method: "GET",

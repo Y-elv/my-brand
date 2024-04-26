@@ -17,13 +17,7 @@ async function handleLoginSubmit(e) {
     setMessage("Please fill in all the required fields.", "red");
     return;
   }
-  const token = localStorage.getItem("token");
-  console.log("token:", token);
-
-  if (!token) {
-    console.error("Token not found in local storage");
-    return;
-  }
+ 
 
   try {
     const response = await fetch(
@@ -32,7 +26,7 @@ async function handleLoginSubmit(e) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          authorization: `${token}`,
+         
         },
         body: JSON.stringify({ email: email, password: password }),
       }
