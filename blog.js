@@ -40,7 +40,7 @@ function displayTasks(messages) {
                 <div class="left-blog">
                   
     
-                    <label for="${message.id}"><img class="blog-pic" src="${message.pic}" alt="Image" /></label>
+                    <label for="${message.id}"><img class="blog-pic" src="${message.images}" alt="Image" /></label>
                     <p class="blog-name">${message.name}</p>
                      <p class="blog-description">${message.description}</p>
                      <div class="blog-icons">

@@ -1,22 +1,21 @@
 const blogForm = document.getElementById("blogForm");
 const messageDiv = document.getElementById("message");
-let arr = [];
 
 blogForm.addEventListener("submit", handleCreateBlogSubmit);
 
 async function handleCreateBlogSubmit(e) {
   e.preventDefault();
 
-  const name = blogForm.blogName.value;
-  const description = blogForm.blogDescription.value;
-  const pic = blogForm.blogImage.files[0];
+  const name = document.getElementById("blogName").value;
+  const description = document.getElementById("blogDescription").value;
+  const images = document.getElementById("blogImage").files[0];
 
-  if (!name || !description || !pic) {
+  if (!name || !description || !images) {
     setMessage("Please fill in all the required fields.", "red");
     return;
   }
+
   const token = localStorage.getItem("token");
-  console.log("token:", token);
 
   if (!token) {
     console.error("Token not found in local storage");
@@ -24,51 +23,40 @@ async function handleCreateBlogSubmit(e) {
   }
 
   try {
-    console.log("Data being sent:", { name, description, pic });
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("description", description);
+    formData.append("images", images);
+
+    console.log(formData);
 
     const response = await fetch(
-      "https://my-brand-bn-ytew.onrender.com/api/v1/blog/createBlog",
+      "http://localhost:3000/api/v1/blog/createBlog",
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
           authorization: `${token}`,
         },
-        body: JSON.stringify({
-          name: name,
-          description: description,
-          pic,
-        }),
+        body: formData,
       }
     );
 
     if (!response.ok) {
-      throw new Error("failed to Create a blog");
+      throw new Error("Failed to create a blog");
     }
 
     const data = await response.json();
 
     if (data.status === true) {
-      // Login successful
-      console.log("create Blog  successful");
-
-      // You can perform user-specific actions here, if needed
-
-      // Proceed to dashboard page
-      setMessage("create Blog  successful", "green");
-      setTimeout(() => {
-        window.location.href = "dashboard.html";
-      }, 3000);
+      console.log("Create Blog successful");
+      setMessage("Create Blog successful", "green");
     } else {
-      // Login failed
-      console.log("failed to Create a blog");
-
-      // Display login failure message
-      setMessage("failed to Create a blog. Please try again.", "red");
+      console.log("Failed to create a blog");
+      setMessage("Failed to create a blog. Please try again.", "red");
     }
   } catch (error) {
     console.error("Error:", error.message);
-    setMessage("failed to Create a blog. Please try again.", "red");
+    setMessage("Failed to create a blog. Please try again.", "red");
   }
 
   // Clear form fields
