@@ -1192,6 +1192,7 @@ a {
 }
 .left-blog {
   display: flex;
+
   align-items: center;
   font-size: 18px;
   gap: 5rem;
@@ -1210,7 +1211,69 @@ a {
 .blog-user-conents {
   height: 80vh;
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   justify-content: center;
   padding: 20px 30px;
+}
+.custom-form {
+  width: 400px; /* Adjust width as needed */
+  height: 500px; /* Adjust height as needed */
+  padding: 20px; /* Add padding to the form */
+  border: 1px solid #ccc; /* Add border for visibility */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+}
+
+.custom-form label {
+  font-size: 18px; /* Adjust font size of labels */
+  margin-bottom: 10px; /* Add margin bottom for spacing */
+}
+
+.custom-form input[type="text"],
+.custom-form textarea,
+.custom-form input[type="file"],
+.custom-form input[type="submit"] {
+  width: 100%; /* Set input fields and button to full width */
+  padding: 10px; /* Add padding to input fields and button */
+  font-size: 16px; /* Adjust font size of input fields and button */
+  margin-bottom: 20px; /* Add margin bottom for spacing */
+}
+
+.custom-form input[type="submit"] {
+  background-color: rgba(var(--themeColor), 1); /* Green background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  cursor: pointer; /* Add pointer cursor on hover */
+  padding: 15px 20px; /* Add padding */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+}
+
+.custom-form input[type="submit"]:hover {
+  background-color: rgba(
+    var(--themeColor),
+    2
+  ); /* Darker green background color on hover */
+}
+.createBlog {
+  color: rgba(var(--themeColor), 1) !important;
+  font-size: 20px;
+}
+.comment-input {
+  margin-top: 10px;
+}
+
+.comment-input input[type="text"] {
+  width: 80%;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.comment-input button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  
 }

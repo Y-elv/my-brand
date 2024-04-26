@@ -38,9 +38,21 @@
                 </div>
             </div>
             <div class="under-div">
-                <div class="part1">Blogs</div>
-                <a href="createBlog.html" class="createBlog">Create Blog</a>
-                <div class="blog-conents"></div>
+                <div class="part1">Create Your Blog</div>
+                <div class="create-blog-conents">
+                    <form id="blogForm"class="custom-form" enctype="multipart/form-data">
+                        <label for="blogName">Name:</label>
+                        <input type="text" id="blogName" name="blogName"><br><br>
+                    
+                        <label for="blogDescription">Description:</label>
+                        <textarea id="blogDescription" name="blogDescription"></textarea><br><br>
+                    
+                        <label for="blogImage">Image:</label>
+                        <input type="file" id="blogImage" name="blogImage" accept="image/*"><br><br>
+                        <div id="message" style="margin-top: 4px;"></div>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -50,7 +62,7 @@
 
 
 
-<script src="./blog.js"></script>
+    <script src="./createBlog.js"></script>
 
 </body>
 
