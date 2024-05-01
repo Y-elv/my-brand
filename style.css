@@ -1148,7 +1148,7 @@ a {
   display: flex;
   align-items: center;
   font-size: 28px;
-  color:#5D7285;
+  color: #5d7285;
 }
 .blogs {
   display: flex;
@@ -1228,7 +1228,7 @@ a {
   padding: 20px; /* Add padding to the form */
   border: 1px solid #ccc; /* Add border for visibility */
   border-radius: 5px; /* Add border-radius for rounded corners */
-  background-color: #667A8A;
+  background-color: #667a8a;
 }
 
 .custom-form label {
@@ -1458,4 +1458,14 @@ a {
   display: flex;
   justify-content: center;
   padding-top: 20px;
+}
+.btn-create {
+  background-color: #5d7285;
+  color: #363636;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #5d7285;
+  font-size: 15px;
+  margin: 20px 0px 0px 40px;
 }
