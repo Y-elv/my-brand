@@ -27,7 +27,7 @@
                     <img src="./assets/dashboard.png" />
                     <a href="./lastDashboard.html">Dashboard</a>
                 </div>
-                <div class="navlink-v2-nav active">
+                <div class="navlink-v2-nav active-last">
                     <img src="./assets/blogs.png" />
                     <a href="./lastBlog.html">Blogs</a>
                 </div>
@@ -43,7 +43,7 @@
 
             </div>
 
-            <div class="navlink-v2-nav-logut active">
+            <div class="navlink-v2-nav-logut active-last">
                 <img src="./assets/logout.png" />
                 <a href="./admin.html">Logout</a>
             </div>
@@ -63,6 +63,26 @@
                         <h1 class="indicator">Blog</h1>
                     </div>
                 </div>
+
+                    <div class="last-under-div">
+                        <div class="part1">Create Your Blog</div>
+                        <div class="create-blog-conents">
+                            <form id="blogForm" class="custom-form" enctype="multipart/form-data">
+                                <label for="blogName">Name:</label>
+                                <input type="text" id="blogName" name="blogName"><br><br>
+                    
+                                <label for="blogDescription">Description:</label>
+                                <textarea id="blogDescription" name="blogDescription"></textarea><br><br>
+                    
+                                <label for="blogImage">Image:</label>
+                                <input type="file" id="blogImage" name="blogImage" accept="image/*"><br><br>
+                                <div id="message" style="margin-top: 4px;"></div>
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+
+
 
 
             </div>

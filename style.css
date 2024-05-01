@@ -1137,12 +1137,18 @@ a {
   height: 50vh;
   width: 70vw;
 }
+.last-under-div {
+  height: 70vh;
+  width: 70vw;
+  padding-left: 50px;
+}
 .part1 {
   height: 8vh;
   width: 70vw;
   display: flex;
   align-items: center;
   font-size: 28px;
+  color:#5D7285;
 }
 .blogs {
   display: flex;
@@ -1222,6 +1228,7 @@ a {
   padding: 20px; /* Add padding to the form */
   border: 1px solid #ccc; /* Add border for visibility */
   border-radius: 5px; /* Add border-radius for rounded corners */
+  background-color: #667A8A;
 }
 
 .custom-form label {
@@ -1330,7 +1337,7 @@ a {
   width: 2vw;
   color: #b9c8d6;
 }
-.active {
+.active-last {
   background-color: #2196f3;
   border-radius: 5px;
 }
@@ -1372,7 +1379,6 @@ a {
 .right-v2-down {
   height: 90vh;
   background-color: #ebe4e4c9;
- 
 }
 .indicator {
   color: #5d7285;
