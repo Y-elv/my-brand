@@ -1378,11 +1378,61 @@ a {
 }
 .cards-v2 {
   margin-top: 20px;
-  border: 1px solid red;
+  
   width: 70vw;
   height: 50vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-left: 30px;
+  justify-content: space-between;
+}
+.sub-cards {
+  
+  width: 20vw;
+  height: 10vw;
+  border-radius: 7px;
+}
+.first-card {
+  background-color: #9fc4fc;
+  display: flex;
+  padding-left: 50px;
+  align-items: center;
+}
+.second-card {
+  background-color: #fa9975;
+  display: flex;
+  padding-left: 50px;
+  align-items: center;
+}
+.third-card {
+  background-color: #8df3f3;
+  display: flex;
+  padding-left: 50px;
+  align-items: center;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  height: 6vh;
+  width: 3.5vw;
+  border-radius: 50%;
+}
+.icon img {
+  width: 2vw;
+  height: 3vh;
+}
+.text-v2 {
+ 
+  margin-left: 10px;
+  
+  display: flex;
+  flex-direction: column;
+}
+.text-v2 h2 {
+  font-size: 20px;
+}
+.text-v2 p {
+  font-size: 15px;
 }
