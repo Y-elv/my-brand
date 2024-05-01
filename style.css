@@ -1372,13 +1372,14 @@ a {
 .right-v2-down {
   height: 90vh;
   background-color: #ebe4e4c9;
+ 
 }
 .indicator {
   color: #5d7285;
 }
 .cards-v2 {
   margin-top: 20px;
-  
+
   width: 70vw;
   height: 50vh;
   display: flex;
@@ -1387,7 +1388,6 @@ a {
   justify-content: space-between;
 }
 .sub-cards {
-  
   width: 20vw;
   height: 10vw;
   border-radius: 7px;
@@ -1424,9 +1424,8 @@ a {
   height: 3vh;
 }
 .text-v2 {
- 
   margin-left: 10px;
-  
+
   display: flex;
   flex-direction: column;
 }
@@ -1435,4 +1434,22 @@ a {
 }
 .text-v2 p {
   font-size: 15px;
+}
+.comment-title {
+  background-color: #2196f3;
+  height: 4vh;
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 12px;
+  align-items: center;
+  color: #fff;
+  font-size: 12px;
+}
+.comments-holder {
+  min-height: 85vh;
+  width: 75vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
 }
