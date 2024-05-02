@@ -50,7 +50,7 @@ async function handleLoginSubmit(e) {
       // Proceed to dashboard page
       setMessage("Login successful. Redirecting to dashboard...", "green");
       setTimeout(() => {
-        window.location.href = "message.html";
+        window.location.href = "lastDashboard.html";
       }, 3000);
     } else {
       // Login failed
