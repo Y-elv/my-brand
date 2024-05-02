@@ -1331,10 +1331,20 @@ a {
   height: 5vh;
   width: 20vw;
 }
+.extend {
+  margin-left: 40px;
+}
+.extend-dash {
+  margin-left: 30px;
+}
 .navlink-v2-nav img {
   height: 3vh;
   width: 2vw;
-  color: #b9c8d6;
+
+  color: #b9c8d6 !important;
+}
+.color-icon {
+  color: #b9c8d6 !important;
 }
 .active-last {
   background-color: #2196f3;
