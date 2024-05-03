@@ -73,3 +73,18 @@ function setMessage(message, color) {
   messageDiv.style.color = color;
   messageDiv.style.fontSize = "20px";
 }
+
+const isAuthenticated = () => {
+  const token = localStorage.getItem("token");
+  return token !== null;
+};
+
+const redirectToLogin = () => {
+  window.location.href = "/admin.html";
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+  if (!isAuthenticated()) {
+    redirectToLogin();
+  }
+});
