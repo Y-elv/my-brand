@@ -68,7 +68,7 @@ function displayTasks(messages) {
     function redirectToUpdatePage(blogId) {
       console.log("Blog ID:", blogId);
       // Redirect to the update page with the blog ID as a query parameter
-      window.location.href = `updateBlog.html?blogId=${blogId}`;
+      window.location.href = `lastUpdateBlog.html?blogId=${blogId}`;
     }
   });
 }
