@@ -36,17 +36,19 @@ function displayTasks(messages) {
   // Clear previous tasks if any
   tasksContainer.innerHTML = "";
 
-  messages.forEach((message) => {
+  messages.forEach((message,index) => {
     const taskElement = document.createElement("div");
     taskElement.classList.add("message");
     taskElement.innerHTML = `
-                <div class="left">
+                <div class="left-comments">
                   
     
-                    <label for="${message.id}">${message.blogId}</label>
+                      <p>${index + 1}</p> 
                      <p>${message.name}</p>
                      <p>${message.text}</p>
-                      <i class="fa-solid fa-trash"data-task-id="${message._id}"></i>
+                      <i class="fa-solid fa-trash"data-task-id="${
+                        message._id
+                      }"></i>
                 </div>
                
                 

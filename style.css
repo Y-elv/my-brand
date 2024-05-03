@@ -1195,6 +1195,8 @@ a {
   font-size: 18px;
   justify-content: space-between;
   padding-bottom: 6px;
+
+  gap: 28.5rem;
 }
 .left-blog {
   display: flex;
@@ -1465,8 +1467,9 @@ a {
   min-height: 85vh;
   width: 75vw;
   display: flex;
-  justify-content: center;
-  padding-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
 }
 .btn-create {
   background-color: #5d7285;
@@ -1477,4 +1480,16 @@ a {
   border: 1px solid #5d7285;
   font-size: 15px;
   margin: 20px 0px 0px 40px;
+}
+.message-contents {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+.left-comments {
+  display: flex;
+  font-size: 18px;
+  justify-content: space-between;
+  gap: 24rem;
+  margin-top: 5px;
 }
