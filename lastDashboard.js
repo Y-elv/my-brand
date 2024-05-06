@@ -9,16 +9,16 @@ function fetchCommentsCount(token) {
     .then((response) => response.json())
     .then((data) => {
       // Log the fetched data to console
-      console.log("Comments data:", data.count);
-if (typeof data === "object") {
-  const count = Object.keys(data).length;
-  console.log("Data has", count, "properties");
-  // Update the messages count element
-  const messagesCountElement = document.querySelector(".comments-count");
-  messagesCountElement.textContent = count;
-} else {
-  console.log("Data is not an object");
-}
+      console.log("Comments data:", data);
+      if (typeof data === "object") {
+        const count = Object.keys(data).length;
+        console.log("Data has", count, "properties");
+        // Update the messages count element
+        const messagesCountElement = document.querySelector(".comments-count");
+        messagesCountElement.textContent = count;
+      } else {
+        console.log("Data is not an object");
+      }
     })
     .catch((error) => console.error("Error fetching comments count:", error));
 }
@@ -36,9 +36,10 @@ function fetchBlogsCount() {
   })
     .then((response) => response.json())
     .then((data) => {
+      console.log("blogs", data);
       // Log the fetched data to console
-       if (typeof data === "object") {
-        const count = Object.keys(data).length;
+      if (typeof data === "object") {
+        const count = data.message.length;
         console.log("Data has", count, "properties");
         // Update the messages count element
         const messagesCountElement = document.querySelector(".blogs-count");
@@ -64,17 +65,17 @@ function fetchMessagesCount(token) {
     .then((response) => response.json())
     .then((data) => {
       // Log the fetched data to console
-      console.log("Messages data:", data);
+      console.log("Messages data:", data.messages.length);
 
-     if (typeof data === "object") {
-       const count = Object.keys(data).length;
-       console.log("Data has", count, "properties");
-       // Update the messages count element
-       const messagesCountElement = document.querySelector(".messages-count");
-       messagesCountElement.textContent = count;
-     } else {
-       console.log("Data is not an object");
-     }
+      if (typeof data === "object") {
+        const count = data.messages.length;
+        console.log("Data has", count, "properties");
+        // Update the messages count element
+        const messagesCountElement = document.querySelector(".messages-count");
+        messagesCountElement.textContent = count;
+      } else {
+        console.log("Data is not an object");
+      }
     })
     .catch((error) => console.error("Error fetching messages count:", error));
 }
